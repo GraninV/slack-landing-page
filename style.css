@@ -1,0 +1,11 @@
+
+html, body {
+  font-family: 'Lato', sans-serif;
+}
+
+
+/*for removing underline from links:
+  http://stackoverflow.com/questions/10853881/how-to-remove-underline-from-a-link-in-html*/
+a.no_underline {
+  text-decoration: none
+}
