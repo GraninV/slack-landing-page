@@ -9,14 +9,16 @@ html, body {
 }
 
 .cover {
-  /*background-image: url("https://a.slack-edge.com/4030/img/wired/neutrino-observatory-header-image@2x.jpg");*/
-  background-image: url(https://tctechcrunch2011.files.wordpress.com/2014/02/bitcoin-perfecthue.jpg?fit=1%2C1);
+  /*background-image: url(http://i.imgur.com/guhkuBy.jpg);*/
+  background-image: url(http://i.imgur.com/mNCwAqX.jpg);
   background-size: cover;
-  height: 100%;
   width: 100%;
+  height: auto;
+  /*WHY was this causing so much grief: */
+  /*width: 100%;
+  height: 100%;*/
   display: flex;
   flex-flow: column nowrap;
-  flex: none;
   justify-content: space-between;
 }
 
@@ -25,21 +27,35 @@ html, body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  flex: none;
-}
-
-.ci_child {
-
+  padding-bottom: 50px;
 }
 
 .secondary_info {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;;
+  justify-content: space-around;
+  border-top-color: rgba(255, 255, 255, 0.0980392);
+  border-top-style: solid;
+  border-top-width: .0000001px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.nav_list {
+  color: #696969;
 }
 
 .si_child {
+  list-style-type: none;
+}
 
+.si_child li {
+  opacity: 0.5;
+}
+
+.link_heading {
+  text-transform: uppercase;
+  opacity: 1 !important;
 }
 
 .footer_list, .nav_list {
@@ -47,25 +63,151 @@ html, body {
   flex-flow: row nowrap;
   justify-content: flex-end;
   list-style-type: none;
+  align-items: baseline;
+  padding-right: 20px;
 }
 
-
-/*.nav_list {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  list-style-type: none;
-}*/
+nav, .central_info, .secondary_info, footer {
+  flex: none;
+}
 
 .footer_list li, .nav_list li {
   padding: 8px;
-  margin-left: 9px;
+  margin-left: 15px;
+}
+
+.no_underline {
+  text-decoration: none;
+  margin-right: auto;
+  color: inherit;
+}
+
+#logo {
+  font-size: 30px;
+  color: #FFF;
+}
+
+#headline_txt {
+  max-width: 375px;
+  width: 100%;
+  display:block;
+  margin: 40px auto 22px;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+#subhead_txt {
+  max-width: 275px;
+  width: 100%;
+  display:block;
+  margin: 20px auto 22px;
+  text-align: center;
+}
+
+.email_submit {
+  padding:30px;
+  padding-bottom: 40px;
+  border-color: #000000;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.button_input {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+input {
+  margin-bottom: 0;
+  font-size: 1.249rem;
+  padding: .743rem;
+  width: 240px;
+  line-height: normal;
+  border: 1px solid #C5C5C5;
+  border-radius: .25rem;
+  color: #A9A9A9;
+  margin-right: 7px!important;
+  margin-left: 0!important;
+}
+
+button {
+  border: 1px solid #56B68B;
+  background: #56B68B;
+  color: #FFF;
+  font-weight: 700;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  opacity: 1;
+  line-height: 3rem;
+  margin: 0;
+  text-align: center;
+  border-radius: .25rem;
+  font-family: inherit;
+}
+
+.nav_list li:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #FFF;
+  border-radius: 0.25rem;
+}
+
+#double_border:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: 	#FFFFFF;
+  border: 3px solid  #FFFFFF;
+}
+
+#double_border {
+  border: 3px solid #696969;
+  border-radius: .25rem;
+  padding: 12px;
 }
 
 
-/*for removing underline from links:
-  http://stackoverflow.com/questions/10853881/how-to-remove-underline-from-a-link-in-html*/
-a.no_underline {
-  text-decoration: none;
-  margin-right: auto;
+footer {
+  background-color:  #000032;
+  padding-right: 100px;
+}
+
+.plus {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+
+  #double_border {
+    border: 3px solid #FFF;
+    border-radius: .25rem;
+    padding: 12px;
+    color: #FFF;
+  }
+
+  .button_input {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button, input {
+    width: 265px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    box-sizing: content-box;
+    margin-bottom: 8px;
+  }
+
+  .si_child li:not(.link_heading), .deprecate {
+    display: none;
+  }
+
+  .secondary_info {
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items:flex-start;
+  }
+
 }
