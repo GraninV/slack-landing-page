@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -21,7 +21,20 @@
           <li class="deprecate">Product</li>
           <li class="deprecate">Pricing</li>
           <li class="deprecate">Support</li>
-          <li id="double_border">Sign in</li>
+          <input type="checkbox" id="toggle">
+          <li id="double_border"><label for="toggle">Sign in</label></li>
+          <div class="menu_screen">
+            <ul id="ms_top">
+              <li id="ms_logo">>__CS 52</li>
+              <li id="ms_x"><label for="toggle"><i class="fa fa-times" aria-hidden="true"></i></label></li>
+            </ul>
+            <ul id="ms_rest">
+              <li>Product</li>
+              <li>Price</li>
+              <li>Support</li>
+              <li>Sign In</li>
+            </ul>
+          </div>
         </ul>
       </nav>
       <div class="central_info">
@@ -31,8 +44,8 @@
         </p>
         <div class="email_submit ci_child">
           <div class="button_input">
-            <input type="text" name="Create" value="Email Address">
-            <button type="Submit" name="Submit">Create</button>
+            <input type="text" name="Create" value="Email Address" id="email_input">
+            <button type="Submit" name="Submit" id="email_button">Create</button>
           </div>
           <p>already a cool kid? lets make a web page!</p>
         </div>

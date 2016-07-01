@@ -117,7 +117,7 @@ nav, .central_info, .secondary_info, footer {
   justify-content: flex-start;
 }
 
-input {
+#email_input {
   margin-bottom: 0;
   font-size: 1.249rem;
   padding: .743rem;
@@ -130,7 +130,7 @@ input {
   margin-left: 0!important;
 }
 
-button {
+#email_button {
   border: 1px solid #56B68B;
   background: #56B68B;
   color: #FFF;
@@ -169,9 +169,34 @@ footer {
   padding-right: 100px;
 }
 
-.plus {
-  display: none;
+#toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
 }
+
+.menu_screen {
+  opacity: 0;
+  height: 0px;
+  width: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*.menu_screen ul {
+  width: inherit;
+  padding: inherit;
+  margin: inherit;
+}
+
+.menu_screen li {
+  width: inherit;
+  padding: inherit;
+  margin: inherit;
+}*/
 
 @media only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
 
@@ -188,7 +213,7 @@ footer {
     align-items: center;
   }
 
-  button, input {
+  #email_button, #email_input {
     width: 265px;
     padding-left: 20px;
     padding-right: 20px;
@@ -207,5 +232,81 @@ footer {
     justify-content: space-around;
     align-items:flex-start;
   }
+
+  label {
+    position: relative;
+    display: block;
+    font: inherit;
+  }
+
+  #toggle:checked ~ li label {
+    color: blue;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+
+
+  /*http://stackoverflow.com/questions/3250790/making-a-div-that-covers-the-entire-page*/
+  #toggle:checked ~ .menu_screen {
+    display: flex;
+    position: fixed;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background-color: #191970;
+    opacity: 1;
+    z-index:1000;
+  }
+
+  #toggle:checked ~ .menu_screen #ms_top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style-type: none;
+    align-items: baseline;
+    padding: 10px;
+  }
+
+  #toggle:checked ~ .menu_screen #ms_top li {
+    font-weight: bold;
+    font-size: 30px;
+    width: 50% !important;
+    color: #FFF;
+  }
+
+  #toggle:checked ~ .menu_screen #ms_top #ms_x {
+    align-self: flex-end;
+    margin-left: auto;
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  /*     identical ^    */
+  #toggle:checked ~ .menu_screen #ms_rest li {
+    font-weight: bold;
+    font-size: 30px;
+    width: 50% !important;
+    color: #FFF;
+    padding-top: 20px;
+  }
+
+  #toggle:checked ~ .menu_screen #ms_top #ms_logo {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  #toggle:checked ~ .menu_screen #ms_rest {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    list-style-type: none;
+    align-items: baseline;
+    padding: 10px;
+  }
+
+
 
 }
