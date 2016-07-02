@@ -185,6 +185,13 @@ footer {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  top: -195px;
+  left: 0px;
+  background: url(http://i.imgur.com/guhkuBy.jpg) center;
+  display: flex;
+  position: fixed;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
 }
 
 .dep_opposite {
@@ -193,11 +200,8 @@ footer {
 
 @media only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
 
-
-/*need to fix the reverse one not working */
-
   .menu_screen {
-    transition: height 0.8s;
+    transition: all 0.4s ease;
   }
 
   #double_border {
@@ -245,18 +249,13 @@ footer {
 
   /*http://stackoverflow.com/questions/3250790/making-a-div-that-covers-the-entire-page*/
   #toggle:checked ~ .menu_screen {
-    display: flex;
-    position: fixed;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
     width:100%;
     height:100%;
-    top:0px;
-    left:0px;
-    /*background-color:  #191970;*/
     background: url(http://i.imgur.com/guhkuBy.jpg) center;
     opacity: 1;
-    z-index:1000;
+    top:0px;
+    left: 0px;
+    transition: all 0.5s ease;
   }
 
   #toggle:checked ~ .menu_screen #ms_top {
