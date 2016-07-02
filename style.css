@@ -184,25 +184,21 @@ footer {
   width: 0px;
   margin: 0px;
   padding: 0px;
+  overflow-x: hidden;
 }
 
 .dep_opposite {
   display: none;
 }
 
-/*.menu_screen ul {
-  width: inherit;
-  padding: inherit;
-  margin: inherit;
-}
-
-.menu_screen li {
-  width: inherit;
-  padding: inherit;
-  margin: inherit;
-}*/
-
 @media only screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+
+
+/*need to fix the reverse one not working */
+
+  .menu_screen {
+    transition: height 0.8s;
+  }
 
   #double_border {
     border: 3px solid #FFF;
@@ -247,13 +243,6 @@ footer {
     font: inherit;
   }
 
-  #toggle:checked ~ li label {
-    color: blue;
-    text-transform: uppercase;
-    font-style: italic;
-  }
-
-
   /*http://stackoverflow.com/questions/3250790/making-a-div-that-covers-the-entire-page*/
   #toggle:checked ~ .menu_screen {
     display: flex;
@@ -264,7 +253,8 @@ footer {
     height:100%;
     top:0px;
     left:0px;
-    background: #191970 url(http://i.imgur.com/guhkuBy.jpg) center;
+    /*background-color:  #191970;*/
+    background: url(http://i.imgur.com/guhkuBy.jpg) center;
     opacity: 1;
     z-index:1000;
   }
@@ -324,7 +314,7 @@ footer {
   }
 
   #toggle:checked ~ .menu_screen #ms_rest li:hover {
-    box-shadow: 10px 10px;
+    box-shadow: 10px 7px;
     background-color: transparent !important;
   }
 
