@@ -54,6 +54,7 @@ width: auto;
 when styling the main ``cover`` div. 
 
 - Although the checkbox hack (referenced below) was in principle somewhat simple to implement, there were some absurdly frustrating design issues to overcame in its latter stages. These were concerned mainly with figuring out where on our page the menu pop-up (which was at this stage set to occupy zero space and not be visible) should be located. Its location - even when not visible - was having implications on later implementing proper transitions. Fixing this issue was accomplished by slightly tweaking both the transition performed, and the div containing our pop-up menu bar. 
+- I used ``font-awesome`` for obtaining facebook and twitter icons.
 - I selected surge (``surge.sh``) to host my page; the service proved immensely easy to use, and I plan to continue using it in the future. Note that the I did not change the URL they provided (i.e. "clever-camera.surge.sh"), though I could have done so, and at no charge at that!
 
 
