@@ -3,7 +3,6 @@ _____
 
 **Ahsan Azim, July 2016**
 
-<!--![alt text](./screen_caps/full_view.png)-->
 <img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/full_view.png" width="600">
 
 This project represents a website that, in its design, imitates that of **Slack**'s landing page - which is accessible at ``slack.com``.
@@ -26,18 +25,17 @@ Although it may load and 'work' on previous versions and other platforms, thorou
 
 - At its earliest stage, the website started out as a simple html file, which looked like the following when rendered:
 
-<!--![alt text](./screen_caps/basic.png)-->
-<img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/basic.png" height="600">
+<img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/basic.png" height="500">
 
 - Slack's font of choice (*Lato* - ``https://www.google.com/fonts/specimen/Lato``) was used throughout
 - The backgrounds used - both the main background and that of the contracted version's menu page - are shown below. They were selected for their contrasting color schemes, and because I like them :)
 
-<!--![alt text](./screen_caps/main_background.jpg)-->
-<img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/main_background.jpg" width="600">
+<img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/main_background.jpg" width="450">
+
 **img**: *the main background*
 
-<!--![alt text](./screen_caps/menu_background.jpg)-->
-<img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/menu_background.jpg" width="600">
+<img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/menu_background.jpg" width="450">
+
 **img**: *the phone menu background - note that only a subset of it actually appears when navigating the phone menu*
 
 ## Design features of note:
@@ -63,5 +61,4 @@ I also made the pop-up menu somewhat stylized:
 
 The following should suffice as a demonstration of all of the aforementioned behaviour:
 
-<!--![alt text](./screen_caps/checkbox_menu_css.gif)-->
-<img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/checkbox_menu_css.gif" height="600">
+<img src="https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/checkbox_menu_css.gif" height="500">
