@@ -4,6 +4,7 @@ _____
 **Ahsan Azim, July 2016**
 
 ![alt text](./screen_caps/full_view.png)
+<img src="https://github.com/ahsanazim/slack-landing-page/blob/master/screen_caps/full_view.png" width="600">
 
 This project represents a website that, in its design, imitates that of **Slack**'s landing page - which is accessible at ``slack.com``.
 
