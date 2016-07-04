@@ -38,6 +38,24 @@ Although it may load and 'work' on previous versions and other platforms, thorou
 
 **img**: *the phone menu background - note that only a subset of it actually appears when navigating the phone menu*
 
+- Flexboxes were used throughout in constructing the layout of the page. Thus, this page does not contain any instances of CSS' much feared ``float``.
+- A particularly annoying stafe of development was ensuring that there remained no whitespace when changing the screen size. Note that the problem was fixed by assigning   
+
+```
+height: 100%; 
+width: 100%;
+```
+when styling the ``html, body`` section, and 
+
+```
+height: 100%; 
+width: auto;
+```
+when styling the main ``cover`` div. 
+
+- Although the checkbox hack (referenced below) was in principle somewhat simple to implment, there were some absurdly frustrating design issues to overcame in its latter stages. These were concerned mainly with figuring out where on our page the menu pop-up (which was at this stage set to occupy zero space and not be visible) should be located. Its location - even when not visible - was having implications on later implementing proper transitions. Fixing this issue was accomplished by slightly tweaking both the transition performed, and the div containing our pop-up menu bar. 
+
+
 ## Design features of note:
 
 Some specific design features, I feel, are worth pointing out in particular:
@@ -53,6 +71,8 @@ I have implemented the following two official extensions:
 
 - CSS Checkbox Hack for the mobile version Menu (reference ``https://css-tricks.com/the-checkbox-hack/`` for a detailed description of the hack)
 - Fancy CSS transition
+
+On a somewhat related note, I was also able to find a bug whereby the mobile-friendly version of the screen would actually not load when used on a mobile. This was fixed by inserting some boilerplate code in the ``head`` section of my ``index.html``.
 
 I also made the pop-up menu somewhat stylized:
 
